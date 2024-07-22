@@ -35,12 +35,12 @@ void loop()
 {
   if(BT.available())    // Si llega un dato por el puerto BT se envía al monitor serial
   {
-    Serial.write(BT.read());
+    Serial.write(BT.read()); //Se escribe en el monitor serial lo que se lee del puerto BT
   }
  
   if(Serial.available())  // Si llega un dato por el monitor serial se envía al puerto BT
   {
-     BT.write(Serial.read());
+     BT.write(Serial.read()); //Se escribe en el puerto BT lo que se lee del monitor Serial
   }
 }
 
